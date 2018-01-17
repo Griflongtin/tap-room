@@ -5,12 +5,16 @@ import { FormsModule } from '@angular/forms';
 
 import { AppComponent } from './app.component';
 import { DirectoryComponent } from './directory/directory.component';
+import { EditKegsComponent } from './edit-kegs/edit-kegs.component';
+import { NewKegsComponent } from './new-kegs/new-kegs.component';
 
 
 @NgModule({
   declarations: [
     AppComponent,
-    DirectoryComponent
+    DirectoryComponent,
+    EditKegsComponent,
+    NewKegsComponent
   ],
   imports: [
     BrowserModule,

@@ -17,18 +17,27 @@ export class DirectoryComponent implements OnInit {
   }
 
   onePint(keg) {
-    keg.quantity -= 1;
-    console.log(keg.quantity)
+    if (keg.quantity <= 0){
+      return keg.quantity = 0
+    } else {
+      keg.quantity -= 1;
+    }
   }
 
   halfGrowler(keg) {
-    keg.quantity -= 2;
-    console.log(keg.quantity)
+    if (keg.quantity <= 0){
+      return keg.quantity = 0
+    } else {
+      keg.quantity -= 2;
+    }
   }
 
   fullGrowler(keg) {
-    keg.quantity -= 4;
-    console.log(keg.quantity)
+    if (keg.quantity <= 0){
+      return keg.quantity = 0
+    } else {
+      keg.quantity -= 4;
+    }
   }
   lowStock(keg) {
     if (keg.quantity <= 10 ){
@@ -36,7 +45,7 @@ export class DirectoryComponent implements OnInit {
     }
   }
   highABV(keg) {
-    if (keg.abv > 7 ){
+    if (keg.abv >= 7 ){
       return 'highABV';
     }
   }
