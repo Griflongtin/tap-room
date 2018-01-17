@@ -1,15 +1,13 @@
-<p>
-  directory works!
-</p>
-<ul>
-  <li *ngFor="let keg of kegs">
-    <h2>{{ keg.name | uppercase }} Details</h2>
-    <div><span>Brewer: </span>{{keg.brewer}}</div>
+
+<ul class="row">
+  <li *ngFor="let keg of kegs" class="col-12 col-sm-6 col-md-4">
+    <div class="beerImg"><img src="../../assets/{{keg.img}}.jpg" alt="keg image"></div>
+    <h2>{{ keg.name | uppercase }}</h2>
     <div><span>Beer: </span>{{keg.name}}</div>
-    <div><span>Price: </span>{{keg.price}}</div>
-    <div><span>ABV: </span>{{keg.abv}}</div>
-    <div>{{keg.img}}</div>
-    <div><span>Quantity: </span>{{keg.quantity}}</div>
+    <div><span>Brewer: </span>{{keg.brewer}}</div>
+    <div class="price"><span>Price:</span><div [class]="keg.price"></div></div>
+    <div [class]="highABV(keg)"><span>ABV: </span>{{keg.abv}}</div>
+    <div><span [class]="lowStock(keg)">Quantity: </span>{{keg.quantity}}</div>
     <div class="buttons">
       <button (click)="onePint(keg)">Pint</button>
       <button (click)="halfGrowler(keg)">32oz</button>

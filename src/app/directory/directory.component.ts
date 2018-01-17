@@ -30,5 +30,15 @@ export class DirectoryComponent implements OnInit {
     keg.quantity -= 4;
     console.log(keg.quantity)
   }
+  lowStock(keg) {
+    if (keg.quantity <= 10 ){
+      return 'bg-danger';
+    }
+  }
+  highABV(keg) {
+    if (keg.abv > 7 ){
+      return 'highABV';
+    }
+  }
 
 }
