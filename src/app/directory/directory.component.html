@@ -1,3 +1,44 @@
 <p>
   directory works!
 </p>
+<ul>
+  <li *ngFor="let keg of kegs">
+    <h2>{{ keg.name | uppercase }} Details</h2>
+    <div><span>Brewer: </span>{{keg.brewer}}</div>
+    <div><span>Beer: </span>{{keg.name}}</div>
+    <div><span>Price: </span>{{keg.price}}</div>
+    <div><span>ABV: </span>{{keg.abv}}</div>
+    <div>{{keg.img}}</div>
+    <div><span>Quantity: </span>{{keg.quantity}}</div>
+    <div class="buttons">
+      <button (click)="onePint(keg)">Pint</button>
+      <button (click)="halfGrowler(keg)">32oz</button>
+      <button (click)="fullGrowler(keg)">64oz</button>
+    </div>
+  </li>
+</ul>
+
+
+
+<!-- <div class="form-group">
+    <label>Edit Keg Information
+      <input class="form-control" [(ngModel)]="keg.name" placeholder="Beer Name">
+      <input class="form-control" [(ngModel)]="keg.brewer" placeholder="Brewer">
+      <input class="form-control" [(ngModel)]="keg.price" placeholder="Price">
+      <input class="form-control" [(ngModel)]="keg.abv" placeholder="ABV">
+      <input class="form-control" [(ngModel)]="keg.img" placeholder="Image">
+    </label>
+</div> -->
+
+
+<div class="form-group">
+  <!-- New Keg -->
+  <label>Employees Only
+    <input class="form-control" type="text" name="name" value="" placeholder=" Beer Name">
+    <input class="form-control" type="text" name="brewer" value="" placeholder="Brewer">
+    <input class="form-control" type="text" name="price" value="" placeholder="Price">
+    <input class="form-control" type="text" name="abv" value="" placeholder="ABV">
+    <input class="form-control" type="text" name="img" value="" placeholder="Image">
+    <button type="submit" name="button">Add New Keg</button>
+  </label>
+</div>

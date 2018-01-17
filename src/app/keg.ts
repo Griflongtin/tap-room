@@ -4,4 +4,5 @@ export class Keg {
   price: string;
   abv: string;
   img: string;
+  quantity: number;
 }
