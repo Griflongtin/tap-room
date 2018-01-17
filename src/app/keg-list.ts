@@ -1,4 +1,4 @@
-import { Keg } from './keg';
+import { Keg } from './keg.model';
 
 export const KEGS: Keg[] = [
   {name: 'Cali Creamin', brewer: 'Mother Earth', price: 'green', abv: 4.5, img: 'motherearth', quantity: 124},

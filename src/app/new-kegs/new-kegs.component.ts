@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { Keg } from '../keg.model';
 
 @Component({
   selector: 'app-new-kegs',

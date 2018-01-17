@@ -1,6 +1,5 @@
-import { Component, OnInit } from '@angular/core';
-import { Keg } from '../keg';
-import { KEGS } from '../keg-list';
+import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
+import { Keg } from '../keg.model';
 
 @Component({
   selector: 'app-directory',
@@ -8,13 +7,20 @@ import { KEGS } from '../keg-list';
   styleUrls: ['./directory.component.css']
 })
 export class DirectoryComponent implements OnInit {
-  kegs = KEGS;
-  selectedKeg = Keg;
+
+  @Input() childKegList: Keg[];
+  @Output() clickSender = new EventEmitter();
+
+  editButtonHasBeenClicked(kegToEdit: Keg) {
+    this.clickSender.emit(kegToEdit);
+  }
+
   constructor() {
    }
 
   ngOnInit() {
   }
+
 
   onePint(keg) {
     if (keg.quantity <= 0){

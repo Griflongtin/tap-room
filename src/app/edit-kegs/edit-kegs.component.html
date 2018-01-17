@@ -1,9 +1,11 @@
-<div class="form-group">
+<div class="form-group" *ngIf="selectedKeg">
     <label>Edit Keg Information
-      <input class="form-control" [(ngModel)]="keg.name" placeholder="Beer Name">
-      <input class="form-control" [(ngModel)]="keg.brewer" placeholder="Brewer">
-      <input class="form-control" [(ngModel)]="keg.price" placeholder="Price">
-      <input class="form-control" [(ngModel)]="keg.abv" placeholder="ABV">
-      <input class="form-control" [(ngModel)]="keg.img" placeholder="Image">
+      <input class="form-control" [(ngModel)]="selectedKeg.name">
+      <input class="form-control" [(ngModel)]="selectedKeg.brewer">
+      <input class="form-control" [(ngModel)]="selectedKeg.price">
+      <input class="form-control" [(ngModel)]="selectedKeg.abv">
+      <input class="form-control" [(ngModel)]="selectedKeg.img">
+      <input class="form-control" [(ngModel)]="selectedKeg.quantity">
+      <button (click)="finishedEditing()">Done</button>
     </label>
 </div>
