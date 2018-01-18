@@ -6,7 +6,7 @@ import { Filter2Pipe } from '../filter2.pipe';
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
-  styleUrls: ['./directory.component.css'],
+  styleUrls: ['./directory.component.scss'],
   pipes: [FilterPipe, Filter2Pipe]
 })
 export class DirectoryComponent implements OnInit {

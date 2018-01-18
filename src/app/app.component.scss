@@ -1,0 +1,23 @@
+h1 {
+  color: red;
+}
+h3 {
+  text-align: center;
+}
+.price-tag {
+  display: flex;
+  justify-content: space-around;
+  .red-cost, .blue-cost, .green-cost {
+    position: relative;
+    img {
+      width: 100px;
+    }
+    P {
+      position: absolute;
+      top: 50px;
+      left: 35px;
+      font-size: 25px;
+      color: black
+    }
+  }
+}

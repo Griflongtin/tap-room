@@ -1,8 +1,23 @@
 <!--The content below is only a placeholder and can be replaced.-->
 <div class="container">
-  <h1>
+  <h1 class="jumbotron">
     Welcome to {{ title }}!
   </h1>
+  <h3>Price Key</h3>
+  <div class="price-tag">
+    <div class="red-cost">
+      <img src="./../assets/redgrowler.png" alt="">
+      <p>$5</p>
+    </div>
+    <div class="green-cost">
+      <img src="./../assets/greengrowler.png" alt="">
+      <p>$7</p>
+    </div>
+    <div class="blue-cost">
+      <img src="./../assets/bluegrowler.png" alt="">
+      <p>$8</p>
+    </div>
+  </div>
   <section class="main">
     <app-directory [childKegList]="masterKegList" (clickSender)="editKeg($event)"></app-directory>
     <br>

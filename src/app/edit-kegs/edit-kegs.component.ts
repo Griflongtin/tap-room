@@ -4,7 +4,7 @@ import { Keg } from '../keg.model';
 @Component({
   selector: 'app-edit-kegs',
   templateUrl: './edit-kegs.component.html',
-  styleUrls: ['./edit-kegs.component.css']
+  styleUrls: ['./edit-kegs.component.scss']
 })
 export class EditKegsComponent {
   @Input() childSelectedKeg: Keg;
@@ -13,6 +13,7 @@ export class EditKegsComponent {
 
   doneButtonClicked() {
     this.doneButtonClickedSender.emit();
+
   }
 
   constructor() { }

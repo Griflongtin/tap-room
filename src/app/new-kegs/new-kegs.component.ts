@@ -6,7 +6,7 @@ declare var firebase: any;
 @Component({
   selector: 'app-new-kegs',
   templateUrl: './new-kegs.component.html',
-  styleUrls: ['./new-kegs.component.css'],
+  styleUrls: ['./new-kegs.component.scss'],
   providers: [ HttpService]
 })
 export class NewKegsComponent implements OnInit {

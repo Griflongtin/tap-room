@@ -8,7 +8,7 @@ declare var firebase: any;
 @Component({
   selector: 'app-root',
   templateUrl: './app.component.html',
-  styleUrls: ['./app.component.css'],
+  styleUrls: ['./app.component.scss'],
   providers: [ HttpService]
 })
 export class AppComponent implements OnInit {
@@ -35,8 +35,15 @@ export class AppComponent implements OnInit {
     this.selectedKeg = clickedKeg;
 
   }
-
   finishedEditing() {
+    // firebase.database().ref("/").update({
+    //   name: this.selectedKeg.name,
+    //   brewer: this.selectedKeg.brewer,
+    //   price: this.selectedKeg.price,
+    //   abv: this.selectedKeg.abv,
+    //   img: this.selectedKeg.img,
+    //   quantity: this.selectedKeg.quantity
+    // });
     this.selectedKeg = null;
   }
 
