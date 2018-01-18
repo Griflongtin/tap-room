@@ -14,9 +14,9 @@ export class NewKegsComponent implements OnInit {
   constructor(private httpService: HttpService) { }
   ngOnInit() {
   }
-  
-  fbPostData(name, brewer, price, abv, img, quantity){
-    firebase.database().ref('/').push({name: name, brewer: brewer, price: price, abv: abv, img: img, quantity: quantity })
+
+  fbPostData(name, brewer, price, abv, img){
+    firebase.database().ref('/').push({name: name, brewer: brewer, price: price, abv: abv, img: img, quantity: 124 })
   }
 
 }

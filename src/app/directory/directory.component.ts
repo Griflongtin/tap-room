@@ -1,10 +1,12 @@
 import { Component, OnInit, Input, Output, EventEmitter } from '@angular/core';
 import { Keg } from '../keg.model';
+import { FilterPipe } from '../filter.pipe';
 
 @Component({
   selector: 'app-directory',
   templateUrl: './directory.component.html',
-  styleUrls: ['./directory.component.css']
+  styleUrls: ['./directory.component.css'],
+  pipes: [FilterPipe]
 })
 export class DirectoryComponent implements OnInit {
 

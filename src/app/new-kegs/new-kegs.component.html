@@ -1,12 +1,12 @@
 <div class="form-group">
   <!-- New Keg -->
   <label>New Kegs
-    <input class="form-control" type="text"  [(ngModel)]="name">
-    <input class="form-control" type="text" name="brewer" [(ngModel)]="brewer">
+    <input class="form-control" type="text"  placeholder="Beer Name" [(ngModel)]="name">
+    <input class="form-control" type="text" name="brewer" placeholder="Brewery" [(ngModel)]="brewer">
     <input class="form-control" type="text" name="price" placeholder="Price" [(ngModel)]="price">
     <input class="form-control" type="text" name="abv" placeholder="ABV" [(ngModel)]="abv">
     <input class="form-control" type="text" name="img" placeholder="Image" [(ngModel)]="img">
-    <input class="form-control" type="text" name="quantity" placeholder="quantity" [(ngModel)]="quantity">
-    <button class="btn btn-dark" (click)="fbPostData(name, brewer, price, abv, img, quantity)">Add New Keg</button>
+    <!-- <input class="form-control" type="text" name="quantity" placeholder="quantity" [(ngModel)]="quantity"> -->
+    <button class="btn btn-dark" (click)="fbPostData(name, brewer, price, abv, img)">Add New Keg</button>
   </label>
 </div>
