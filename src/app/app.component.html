@@ -9,7 +9,7 @@
     <h3>Employees Only</h3>
     <div class="row">
       <div class="col-12 col-sm-6">
-        <app-edit-kegs [childSelectedKeg]="selectedKeg"></app-edit-kegs>
+        <app-edit-kegs [childSelectedKeg]="selectedKeg" (doneButtonClickedSender)="finishedEditing()" ></app-edit-kegs>
       </div>
       <div class="col-12 col-sm-6">
         <app-new-kegs></app-new-kegs>

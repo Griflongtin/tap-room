@@ -15,9 +15,8 @@ export class AppComponent {
 
   selectedKeg = null;
   editKeg(clickedKeg) {
-    console.log(clickedKeg)
     this.selectedKeg = clickedKeg;
-    console.log(this.selectedKeg)
+
   }
 
   finishedEditing() {

@@ -8,6 +8,12 @@ import { Keg } from '../keg.model';
 })
 export class EditKegsComponent {
   @Input() childSelectedKeg: Keg;
+  @Output() doneButtonClickedSender = new EventEmitter();
+
+
+  doneButtonClicked() {
+    this.doneButtonClickedSender.emit();
+  }
 
   constructor() { }
 
