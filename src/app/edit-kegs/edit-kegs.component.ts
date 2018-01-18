@@ -6,8 +6,9 @@ import { Keg } from '../keg.model';
   templateUrl: './edit-kegs.component.html',
   styleUrls: ['./edit-kegs.component.css']
 })
-export class EditKegsComponent implements OnInit {
+export class EditKegsComponent {
   @Input() childSelectedKeg: Keg;
+
   constructor() { }
 
   ngOnInit() {
