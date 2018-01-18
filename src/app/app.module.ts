@@ -9,6 +9,7 @@ import { EditKegsComponent } from './edit-kegs/edit-kegs.component';
 import { NewKegsComponent } from './new-kegs/new-kegs.component';
 import {HttpClientModule} from '@angular/common/http';
 import { FilterPipe } from './filter.pipe';
+import { Filter2Pipe } from './filter2.pipe';
 
 @NgModule({
   declarations: [
@@ -16,7 +17,8 @@ import { FilterPipe } from './filter.pipe';
     DirectoryComponent,
     EditKegsComponent,
     NewKegsComponent,
-    FilterPipe
+    FilterPipe,
+    Filter2Pipe
   ],
   imports: [
     BrowserModule,

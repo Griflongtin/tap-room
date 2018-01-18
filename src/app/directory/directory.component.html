@@ -1,11 +1,13 @@
 <form id="search-input">
   <div class="form-group">
-    <label>Search for your <strong>BEER!</strong></label>
+    <label>Search for your favorite <strong>BEER!</strong></label>
     <input [(ngModel)]="term" name="term" class="form-control" type="text" placeholder="Search">
+    <label>Search for your favorite <strong>Brewery!</strong></label>
+    <input [(ngModel)]="brew" name="brew" class="form-control" type="text" placeholder="Search">
   </div>
 </form>
 <ul class="row">
-  <li *ngFor="let keg of childKegList | filter:term" class="col-12 col-sm-6 col-md-4">
+  <li *ngFor="let keg of childKegList | filter:term | filter2:brew" class="col-12 col-sm-6 col-md-4">
     <div class="beerImg"><img src="../../assets/{{keg.img}}.jpg" alt="keg image"></div>
     <h2>{{ keg.name | uppercase }}</h2>
     <div><span>Beer: </span>{{keg.name}}</div>
