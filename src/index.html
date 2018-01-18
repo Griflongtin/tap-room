@@ -11,5 +11,20 @@
 </head>
 <body>
   <app-root>Loading....</app-root>
+
+
+  <script src="https://www.gstatic.com/firebasejs/4.8.2/firebase.js"></script>
+  <script>
+    // Initialize Firebase
+    var config = {
+      apiKey: "AIzaSyASuZK1hO64JeUqrst7_4nJ45ynloMmdTE",
+      authDomain: "epi-tap-room.firebaseapp.com",
+      databaseURL: "https://epi-tap-room.firebaseio.com",
+      projectId: "epi-tap-room",
+      storageBucket: "epi-tap-room.appspot.com",
+      messagingSenderId: "215880070441"
+    };
+    firebase.initializeApp(config);
+  </script>
 </body>
 </html>

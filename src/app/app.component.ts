@@ -2,6 +2,7 @@ import { Component, OnInit } from '@angular/core';
 import { Keg } from './keg.model';
 import { KEGS } from './keg-list';
 import { HttpService } from './http.service';
+declare var firebase: any;
 
 
 @Component({
@@ -15,13 +16,20 @@ export class AppComponent implements OnInit {
 
   constructor(private httpService: HttpService){}
 
-  masterKegList ;
+  masterKegList= [] ;
 
   ngOnInit(){
-    this.httpService.fetchData().subscribe(
-      (data) => this.masterKegList = data
-    );
+    // this.httpService.fetchData().subscribe(
+    //   (data) => this.masterKegList = data
+    // );
+    this.fbGetData();
   }
+  fbGetData(){
+    firebase.database().ref('/').on('child_added',
+    (snapshot) => this.masterKegList.push(snapshot.val())
+    )
+  }
+
   selectedKeg = null;
   editKeg(clickedKeg) {
     this.selectedKeg = clickedKeg;
